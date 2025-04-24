@@ -6,12 +6,14 @@ Array.from(thumbUp).forEach(function(element) {
       element.addEventListener('click', function(){
         const item = this.parentNode.parentNode.childNodes[1].innerText
         const amount = this.parentNode.parentNode.childNodes[3].innerText
+        const owner = this.parentNode.parentNode.childNodes[5].innerText
         fetch('bill', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
             'item': item,
             'amount': amount,
+            'owner' : owner
           })
         })
         .then(response => {
@@ -28,12 +30,14 @@ Array.from(thumbDown).forEach(function(element) {
   element.addEventListener('click', function(){
     const item = this.parentNode.parentNode.childNodes[1].innerText
     const amount = this.parentNode.parentNode.childNodes[3].innerText
+    const owner = this.parentNode.parentNode.childNodes[5].innerText
     fetch('down', {
       method: 'put',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         'item': item,
         'amount': amount,
+        'owner' : owner,
       })
     })
     .then(response => {
@@ -50,6 +54,7 @@ Array.from(trash).forEach(function(element) {
       element.addEventListener('click', function(){
         const item = this.parentNode.parentNode.childNodes[1].innerText
         const amount = this.parentNode.parentNode.childNodes[3].innerText
+        const owner = this.parentNode.parentNode.childNodes[5].innerText
         fetch('bill', {
           method: 'delete',
           headers: {
@@ -57,7 +62,8 @@ Array.from(trash).forEach(function(element) {
           },
           body: JSON.stringify({
             'item': item,
-            'amount': amount
+            'amount': amount,
+            'owner' : owner
           })
         }).then(function (response) {
           window.location.reload()

@@ -42,6 +42,7 @@
             <li class="item">
               <span><%= messages[i].item %></span>
               <span><%= messages[i].amount %></span>
+              <span><%= messages[i].owner %></span>
               <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
             </li>
           <% } %>
@@ -56,6 +57,19 @@
           </form>
         </div>
         <% } %>
+
+        <div class="">
+          <h3>My Bill</h3>
+          <ul class="myBill">
+          <% for(var i=0; i<messages.length; i++) {%>
+            <li class="item">
+              <span><%= messages[i].item %></span>
+              <span><%= messages[i].amount %></span>
+              <span><%= messages[i].owner %></span>
+              <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+            </li>
+          <% } %>
+          </ul>
 
 </div>
 
