@@ -15,9 +15,11 @@ I built Bill Split as a full-stack web application using JavaScript, Express, No
 ## Lessons Learned:
 
 *The power of EJS for dynamic rendering*
+
 EJS allowed me to pass data seamlessly from the backend to the frontend and render updates in real time. I gained a deeper understanding of how templating engines can manage stateful interactions in a server-rendered app.
 
 *The importance of clear data modeling*
+
 Building relationships between users, bills, and items taught me how crucial it is to plan data structures up front. Defining how users would interact with shared resources helped avoid logic issues later when assigning items and calculating totals.
 ## Installation
 
