@@ -4,7 +4,7 @@ Bill Split is a full-stack CRUD application designed to make group dining experi
 
 **Link to project:** https://bill-split-8syg.onrender.com
 
-![alt tag](img/Bill-Split.png)
+![alt tag](/public/img/Bill-Split.png)
 
 ## How It's Made:
 
